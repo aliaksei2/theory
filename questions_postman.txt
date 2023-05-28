@@ -92,7 +92,26 @@ $ console.log("salary =" res_salary[2] == req_salary*3);
 - где == это условия сравнения (означает что равно)
 - где  req_salary*3 это имя переменной в которую внесены данные параметра salary из request и уноженное на 3
 
-8. как проверить структуру json в ответе
+10. как проверить структуру json в ответе
+$ var schema = {'вставить сюда схему'} 
+$ pm.test("schema", function(){
+     pm.response.to.have.jsonSchema(schema)
+  });
 
+11. проверка что элемент массива salary больше чем другие элементы
+$ pm.test("salary_2 > salary_1 && salary_0"), function () {
+	pm.expect(salary_2).to.greaterThan(salary_1)
+	pm.expect(salary_2).to.greaterThan(salary_0);
+});
 
- 
+12. проверка что значение поля = значению переменной из окружения
+$ pm.test("environment name", function () {
+	pm.expect(pm.environment.get("name")).to.eql(res_name);
+});
+
+13. взять любой объект из присланного списка, использовать js random. В объекте взять Cur_ID и передать через окружение в следующий запрос.
+$ var jsonData = pm.response.json();
+$ var random = jsonData[Math.floor(Math.random() * jsonData.length)];
+$ console.log(random);
+$ pm.environment.set("Cur_ID", random.Cur_ID);
+	
