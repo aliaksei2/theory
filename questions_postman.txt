@@ -42,7 +42,8 @@ $ var req = request.data (method post)
 - где req это просто имя переменной, оно может назвыаться как угодно, главное чтоб было уникальным
 - где request это параметр который лезет непосредственно в запрос
 - где data это параметр который забирает информацию
-$ var req = pm.request.url.quer.toObject() 
+
+$ var req = pm.request.url.query.toObject() (method get)
 
 - после создаем переменные с конкретными данными запроса
 $ var req_name = req.name
@@ -92,6 +93,10 @@ $ console.log("salary =" res_salary[2] == req_salary*3);
 - где == это условия сравнения (означает что равно)
 - где  req_salary*3 это имя переменной в которую внесены данные параметра salary из request и уноженное на 3
 
+$ pm.test("salary", function () {
+     pm.expect(res_salary).to.include(req_salary)
+});
+
 10. как проверить структуру json в ответе
 $ var schema = {'вставить сюда схему'} 
 $ pm.test("schema", function(){
@@ -114,4 +119,11 @@ $ var jsonData = pm.response.json();
 $ var random = jsonData[Math.floor(Math.random() * jsonData.length)];
 $ console.log(random);
 $ pm.environment.set("Cur_ID", random.Cur_ID);
+
+14.проверить что у параметра в ответе, есть параметр 
+$ pm.test("name", funcrion () {
+     pm.expect(JSON.stringify(res_dog)).to.include("name")
+});
+- где JSON это структура ответа
+- где stringify это что в структуре JSON есть такой параметр
 	
