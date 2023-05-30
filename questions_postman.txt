@@ -54,7 +54,14 @@ $ var req_name = req.name
  
 6. как отпрвлять запрос на сервер методом get post
 - если хотим отправить запрос на сервер методом get, то можно написать данные в окне params либо в URI отделив endpoint c параметрами ? знаком, а параметры разделять &  например http://162.55.220.72:5005/get_method?name=alex&age=25 
-- если хотим отправить запрос методом post, то можно вписать данные в окне body form-data. либо в окне body raw (json) вручную написать json схему. 
+- если хотим отправить запрос методом post, то можно вписать данные в окне body form-data. либо в окне body raw (json) вручную написать json схему.
+- raw json :
+{
+	"name" : "Alex,
+	"age" : 25,
+	"sex" : "male",
+	"token" : "{{token}}"
+} 
 
 7. как заносить данные в environment
 - можно вручную через графический интерфейс в постмане 
@@ -70,6 +77,8 @@ $ pm.environment.set("name");
 - создать переменную в окружении
 
 8. проверить что параметр в ответе равен параметру из запроса
+-snippets: response body:JSON value check
+
 $ pm.test("name", function () {
 	pm.expect(res_name).to.eql(req_name);
 });
@@ -102,7 +111,7 @@ $ pm.test("salary", function () {
 });
 
 10. как проверить структуру json в ответе
-$ var schema = {'вставить сюда схему'} 
+$ var schema = {вставить сюда схему} 
 $ pm.test("schema", function(){
      pm.response.to.have.jsonSchema(schema)
   });
@@ -147,4 +156,15 @@ $ for (i in res_salary) {
 };
 - где i входит в параметр 
 - где "key" + i это показывает поход итератора, его путь
-- где "value" + res_salary[i] это непосредственно вывод значений массива	
+- где "value" + res_salary[i] это непосредственно вывод значений массива
+
+16. забрать токен с ответа и поместить в окружение
+$ let jsonData = pm.response.json();
+$ let token = jsonData.token;
+$ pm.environment.set("token", token);
+
+17. проверка что значения поля name = значению паременной name из окружения
+$ pm.test("test", function() {
+	pm.expect(pm.environment.get("name")).to.eql(res_name)
+});
+	
