@@ -167,4 +167,18 @@ $ pm.environment.set("token", token);
 $ pm.test("test", function() {
 	pm.expect(pm.environment.get("name")).to.eql(res_name)
 });
-	
+
+18. взять любой объект из списка используя JS random.
+сначала спарсим респонс где есть json с данными
+$ let jsonData = pm.response.json();
+
+потом проведем рандом и выведем рандомный объект
+$ let random = jsonData[Math.floor(Math.random() * jsonData.length)];
+console.log(random);
+- где Math.floor() это метод округления вниз, округляет аргемент до ближайшего меньшего целого.
+- где Math.random это метод возращает псевдослучайное число.
+
+после поместить в окружение значение рандомного объекта
+$ pm.environment.set("CUR_ID", random.Cur_ID);
+- где random.Cur_ID это то по какому уникальному номеру заносить в окружение из рандомного выбора.
+ 	
