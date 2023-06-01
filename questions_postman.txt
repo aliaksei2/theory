@@ -198,4 +198,6 @@ $ sudo chowm -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
 - после экспортируем коллецию из postman. можно как ссылкой, можно как файл json
 - после запускаем 
 $ newman run link/file
- 	
+
+20. проверка типа данных
+$ console.log("type" + typeof req_name);	
