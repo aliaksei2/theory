@@ -133,7 +133,7 @@ $ var random = jsonData[Math.floor(Math.random() * jsonData.length)];
 $ console.log(random);
 $ pm.environment.set("Cur_ID", random.Cur_ID);
 
-14.проверить что у параметра в ответе, есть параметр 
+14.проверить что у параметра в ответе, есть параметр (что в параметре есть другой параметр(ключ))  
 $ pm.test("name", funcrion () {
      pm.expect(JSON.stringify(res_dog)).to.include("name")
 });
@@ -200,4 +200,19 @@ $ sudo chowm -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
 $ newman run link/file
 
 20. проверка типа данных
-$ console.log("type" + typeof req_name);	
+$ console.log("type" + typeof req_name);
+
+21. проверка что в бади приходит правильный стринг
+$ pm.test('name', function(){
+	pm.expect(pm.response.text()).to.include('message');
+
+22. проверить что response имеет параметр(что в json есть ключ с названием name)
+$ pm.test('name', function(){
+	pm.expect(res).to.have.property('name')
+)};
+
+23. команды для newman
+$ newman run collection.json 
+$ newman run collection,json -e environmnent.json
+$ newman run collection,json -e environmnent.json --bail
+	
