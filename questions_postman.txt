@@ -215,4 +215,23 @@ $ pm.test('name', function(){
 $ newman run collection.json 
 $ newman run collection,json -e environmnent.json
 $ newman run collection,json -e environmnent.json --bail
+
+24. цикл который выведет элементы из списка параметра. у одного из элемента есть массив
+$ for (i in pm.response.person) {
+if (Array.isArray(pm.response.person[i])) {
+pm.response.person[i].forEach(value => console.log(value));
+} else {
+console.log('$[i]: ${pm.response.person[i]}');
+}
+}
+
+- Array это массив
+- => это стрелочная функция
+- forEach выполняет указанную функцию один раз для каждого эллемента в массиве
+
+25. последняя задача с циклом 
+
+
+- pm.sendRequest команда помогающая сделать запрос внутри запроса
+- hasOwn - проверяет есть ли такое в параметре (как to.have.property)
 	
