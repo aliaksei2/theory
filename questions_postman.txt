@@ -228,10 +228,39 @@ console.log('$[i]: ${pm.response.person[i]}');
 - Array это массив
 - => это стрелочная функция
 - forEach выполняет указанную функцию один раз для каждого эллемента в массиве
+- response.person[i] где [i] является динамическим параметром который меняется каждую строку. в данном случае под [i] подразумевается key
+- value => это переменная которую будет использовать дальше.
+- $ это параметр для вывода строк, преобразования.
 
 25. последняя задача с циклом 
 
+$ for (let i = 0; i < response.length; i++) {
+	pm.sendRequest({
+		url: 'http://54.157.99.22:80/curr_byn',
+		method: 'POST',
+		header: {
+			'Content-Type': 'application/json',
+			},
+		body: {
+		mode: 'urlencoded',
+		urleconded: [{ key: 'auth_token', value: token},
+			     { key: 'curr_code', value: [i]}]
+			}
+		},
+(error, response) => {
+		response_data = response.json();
+		if (response.code === 500){
+			console.log(error)
+		  }
+	    else if (response.code === 200){
+		   if (Object.hasOwn(response_data, 'Cur_OfficialRate')){
+			console.log(response_data)
+		    }
+		}
+ 	});
+}
 
-- pm.sendRequest команда помогающая сделать запрос внутри запроса
+
+- pm.sendRequest команда помогающая сделать запрос внутри запроса и нужно написать структуру запроса.
 - hasOwn - проверяет есть ли такое в параметре (как to.have.property)
 	
