@@ -1,0 +1,30 @@
+1. что такое sql
+2. что такое СУБД
+3. виды СУБД
+4. какие бывают базы данных
+5. что такое реляционная база данных
+6. DDL что это
+7. DML что это
+8. DCL что это
+9. TCL что это
+10. create table
+11. select, select into, select distinct
+12. update
+13. dalete
+14. drop table
+15. order by
+16. where
+17. join
+18. and, or,  not
+19. min,  max
+20. count, avg,  sum
+21. like
+22. union
+23. in,  between
+24. alter table
+25. not null
+26. unique
+27. primary key
+28. foreign key
+29. auto increment
+
