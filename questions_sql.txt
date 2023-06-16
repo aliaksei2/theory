@@ -93,15 +93,117 @@ ON table3.column2 = table2.id
 WHERE table2.column1 < 1000;
 
 18. and, or,  not
+$ SELECT * FROM table_name
+WHERE country='Germany' AND city='Berline';
+
+$ SELECT * FROM table_name
+WHERE city='Berlin' OR city='Munchen';
+
+$ SELECT * FROM table_name
+WHERE NOT country='Germany';
+
 19. min,  max
+$ SELECT MIN(column_name)
+FROM table_name
+WHERE condirion;
+
+$ SELECT MAX(column_name)
+FROM table_name
+WHERE condition;
+
 20. count, avg,  sum
+- возвращает общее количество строк с указаным параметром
+$ SELECT COUNT(column_name)
+FROM table_name
+WHERE condition;
+
+- возвращает среднее значение числового столбцв
+$ SELECT AVG(column_name)
+FROM table_name
+WHERE condition;
+
+- возращает общую сумму числового столбца
+$ SELECT SUM(column_name)
+FROM table_name
+WHERE condition;
+
 21. like
+- ищет значения из указаного столбца в котором есть какой то символ
+$ SELECT column1, column2
+FROM table_name
+WHERE column1 LIKE 'a%'
+
 22. union
+- используется для объединения результатов оператор SELECT из двух и более таблиц
+$ SELECT column_name FROM table1
+UNION
+SELECT column_name FROM table2;
+
 23. in,  between
+- выводит только те столбцы в которой есть конкретные параметры 
+$ SELECT * FROM table_name
+WHERE country IN ('France', 'UK');
+
+- выводит столбцы в которых значения входят в указаный диапозон
+$ SELECT * FROM table_name
+WHERE column_name BETWEEN 1 AND 12;
+
 24. alter table
+- вносит изменения в структуру таблицы
+$ ALTER TABLE table_name
+ADD column_name;
+
+- переименовать колону
+$ ALTER TABLE table_name
+RENAME COLUMN old_name to new_name;
+
 25. not null
+- не прнимает пустое значение в колонку, обязательно должен быть параметр
+$ CREATE TABLE table_name (
+	ID int NOT NULL,
+	name varchar(33) NOT NULL,
+	age int NOT NULL
+);
+
 26. unique
+- гарантирует что все значения в столбце будут отличаться друг от друга, не будет одинаковых значений
+$ CREATE TABLE table_name (
+	ID int NOT NULL UNIQUE,
+	name varchar(200) NOT NULL,
+	age int
+);
+
 27. primary key
+- благодаря нему можно соединять таблицы по главному ключу, обычно ставят его на ID
+$ CREATE TABLE table_name (
+	ID int NOT NULL PRIMARY KEY,
+	name varchar(200) NOT NULL
+);
+
 28. foreign key
+$ CREATE TABLE table1
+	ID int PRIMARY KEY,
+	name varchar(200) NOT NULL,
+	age int NOT NULL,
+		FOREIGN KEY(name
+		REFERENCES table2(id),
+		FOREIGN KEY(age)
+		REFERENCES table3(id)
+);
+ 
 29. auto increment
+- автоматически увеличивает значение на 1, обычно используется в ID
+$ CREATE TABLE table_name(
+	ID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name varchar(200) NOT NULL
+);
+
+30. serial
+31. group by
+$ SELECT column_name FROM table
+GROUP BY column_name;
+32. insert into
+$ INSERT INTO table (column1, column2)
+	VALUES ('Alex', 1),
+	       ('Kate', 2);
 
