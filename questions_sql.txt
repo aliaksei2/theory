@@ -157,6 +157,10 @@ ADD column_name;
 $ ALTER TABLE table_name
 RENAME COLUMN old_name to new_name;
 
+- поменять тип колоны
+$ alter table table_name
+	alter column column_name type varchar(50);
+
 25. not null
 - не прнимает пустое значение в колонку, обязательно должен быть параметр
 $ CREATE TABLE table_name (
@@ -199,9 +203,16 @@ $ CREATE TABLE table_name(
 );
 
 30. serial
+- задает авто изменение порядкогого номера(то есть плюс один к предыдущему числу) и задае колонке NOT NULL
+$ CREATE TABLE table_name (
+	ID SERIAL PRIMARY KEY,
+	name varchar(50) NOT NULL
+);
+
 31. group by
 $ SELECT column_name FROM table
 GROUP BY column_name;
+
 32. insert into
 $ INSERT INTO table (column1, column2)
 	VALUES ('Alex', 1),
