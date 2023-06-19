@@ -126,7 +126,11 @@ WHERE condition;
 $ SELECT SUM(column_name)
 FROM table_name
 WHERE condition;
-
+ 
+- вычислительные операции внутри запроса(пример из stepik)
+SELECT author, SUM(price * amount) AS sum_price, ROUND(SUM(((price * amount) * 0.18) / (1 + 0.18)),2) AS tax, ROUND(SUM((price * amount) / (1 + 0.18)),2) AS without_tax FROM book
+GROUP BY author;
+ 
 21. like
 - ищет значения из указаного столбца в котором есть какой то символ
 $ SELECT column1, column2
