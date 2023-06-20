@@ -66,13 +66,16 @@ FROM oldtable
 WHERE condition;
 
 12. update
+- обновить данные в таблице
 $ UPDATE table_name
 SET column1 = value1, column2 = value2
 WHERE condition;
 
 13. dalete
+- удалить данные из таблицы
 $ DELETE FROM table_name 
 WHERE condition;
+
 $ DELETE FROM person 
 WHERE name='Alex';
 
@@ -166,6 +169,10 @@ ADD column_name;
 - переименовать колону
 $ ALTER TABLE table_name
 RENAME COLUMN old_name to new_name;
+
+-удалить столбик
+$ ALTER TABLE table_name
+DROP COLUMN column_name;
 
 - поменять тип колоны
 $ alter table table_name
