@@ -89,9 +89,9 @@ ORDER BY column1, column2 ASC|DESC
 
 16. where
 17. join
+- join or inner join  объединяет столбцы с данными у которых есть пара
 $ SELECT column_name(s)
-FROM table1
-INNER JOIN table2
+FROM table1 INNER JOIN table2
 ON table1.column_name = table2.column_name
 
 $ SELECT table1.column1, table2.column1
@@ -100,6 +100,21 @@ ON table3.column1 = table1.id
 JOIN table2
 ON table3.column2 = table2.id
 WHERE table2.column1 < 1000;
+
+- left join объединяет столбцы даже если нет пары(если в левой таблице есть параметры а в правой нет)
+$ SELECT column_name(s)
+FROM table1 LEFT JOIN table2
+ON table1.column_name = table2.column_name
+
+- right join аналогично что и left join только с правой таблицей
+$ SELECT column_name(s)
+FROM table1 RIGHT JOIN table2
+ON table1.column_name = table2.column_name
+
+- FULL OUTER JOIN (FULL JOIN) соединяет все данные, совмещяет LEFT AND RIGHT JOIN
+$ SELECT column_name(s)
+FROM table1 FULL OUTER JOIN table2
+ON table1.column_name = table2.column_name
 
 18. and, or,  not
 $ SELECT * FROM table_name
@@ -147,7 +162,7 @@ FROM table_name
 WHERE column1 LIKE 'a%'
 
 22. union
-- используется для объединения результатов оператор SELECT из двух и более таблиц
+- используется для объединения результатов оператор SELECT из двух и более таблиц. объединяет таблицы сверзу вниз(вертикальное соединение) (a JOIN объединяет слева справа). критерии для объединения: одинаковый тип данных, одинаковое количество столбцов.
 $ SELECT column_name FROM table1
 UNION
 SELECT column_name FROM table2;
@@ -234,4 +249,28 @@ GROUP BY column_name;
 $ INSERT INTO table (column1, column2)
 	VALUES ('Alex', 1),
 	       ('Kate', 2);
+
+33. если в ячеки написано NULL это означает что ячеки просто не существует, если бы ячейка была пустой, то там было бы просто белое, а так это показывает что ячейки просто не существует
+
+34. SubQueries (подзапросы)
+- в данном подзапросе должно быть только одно число, по сколько сравнивать можно только с одним числом)
+$ SELECT * FROM table
+WHERE price < (SELECT AVG(price) FROM table);
+
+- агрегатор ALL ознчает "всё". данный запрос выведет информацию цен товара которые меньше чем все цены из подзапроса ( тоесть меньше чем МИНИМАЛЬНОЕ значение из подзапроса)
+$ SELECT * FROM table
+WHERE price < ALL (SELECT price FROM table WHERE price < 1000);
+
+- знак <> означает что НИЧЕМУ НЕ РАВНО
+$ SELECT * FROM table
+WHERE price <> ALL (SELECT price FROM table WHERE price < 1000);
+
+- агрегатор ANY. данный запрос возвращает МЕНЬШЕ МАКСИМАЛЬНОГО. 
+$ SELECT * FROM table
+WHERE price < ANY (SELECT price FROM table WHERE price < 1000);
+
+- если мы используем с ANY = то это как агрегатор IN
+$ SELECT * FROM table
+WHERE price = ANY (SELECT price FROM table WHERE price < 1000);
+
 
