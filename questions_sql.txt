@@ -39,6 +39,12 @@
 - transaction control language - группа операторов для управления транзакциями. транзакция это команда или блок команд которые успешно завершаются как единое целое при этом в базе данных все внесенные любой командой входящей в транзакцию будут отменены. 
 сюда входят: BEGIN TRANSACTION, COMMIT TRANSACTION, ROLLBACK TRANSACTION, SAVE TRANSACTION.
 
+9.1 подключение к базе данным
+- тап по кнопке new database conection
+- заполнить поля host, port, database, username, password
+- слева отобржается список конектов
+- ПКМ, sql editor
+
 10. create table
 $ CREATE TABLE table_name (
 	column1 datatype,
@@ -200,14 +206,14 @@ $ CREATE TABLE table1
 );
  
 29. auto increment
-- автоматически увеличивает значение на 1, обычно используется в ID
+- автоматически увеличивает значение на 1, обычно используется в ID(аналог serial) используется в mySQL
 $ CREATE TABLE table_name(
 	ID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	name varchar(200) NOT NULL
 );
 
 30. serial
-- задает авто изменение порядкогого номера(то есть плюс один к предыдущему числу) и задае колонке NOT NULL
+- задает авто изменение порядкогого номера(то есть плюс один к предыдущему числу) и задае колонке NOT NULL (аналог auto increment), используется в postgre
 $ CREATE TABLE table_name (
 	ID SERIAL PRIMARY KEY,
 	name varchar(50) NOT NULL
