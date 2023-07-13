@@ -1,0 +1,26 @@
+1. adb это утилита для командной строки для покдлючения и управления телефонов через командную строку на компьютере
+
+2. команды:
+- ./adb devices проверка подключенных деввйсов
+- ./ adb reboot перезагрузка телефона
+- ./ adb install -f app/debug.apk установка apk файла
+- ./ adb uninstall com.adroid.todolist (указывается название приложения как в логах) удаление приложения
+- ./adb logcat показать логи
+- ./adb -s emulator-5554(имя девайса) logcat показать логи
+- ./adb logcat | grep -w "com.qrolic.reminderapp > logs.log находит логи по определенному слову и копирует их в новый файл
+
+3. размножить приложение в симуляторе на xcode
+-зайти в раздел targets->FlappyBird
+- Build settings
+- Packaging -> Product Bundle Identifier -> Release
+
+4. посмотреть логи в xcode
+- lounch simulator
+- debug -> open system log
+
+5. посмотреть логи на айфоне через xcode
+- подключаем айфон к ноуту
+- window -> devices and simulators
+- на телефоне переходим в настройки -> Privacy & Security -> Developer mode -> on
+- в xcode нажимаем open console
+
