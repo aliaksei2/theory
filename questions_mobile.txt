@@ -23,4 +23,8 @@
 - window -> devices and simulators
 - на телефоне переходим в настройки -> Privacy & Security -> Developer mode -> on
 - в xcode нажимаем open console
+6. app activity
+- activity это один "экран" приложения. его можно сравнить со страницей в вебу. например в приложении "email" могут быть такие activity как "inbox activity", "email activity", "settings activity" и другие.
+-activity одного приложения могут запускать друг из друга, так и независимо друг от друга. Если в вебе на другую страницу обращаются по URL, то в android activity запускаются через intent.
+- intent это сообщение которое указывает системе что надо сделать (например открыть данные URL, или написать письмо на данный адрес и так далее).
 
