@@ -13,10 +13,31 @@
 - FAQ (frequently asked question/s) часто задаваемые вопросы
 
 1. functional testing 
-- проверка приложения на то, что все функции соотвествуют функциональным требованиям из ТЗ. к функциональному тестированию относят (unit test, regression test, smoke test, integrational test, sanity testing, beya/usability testing, system testing, E2E testing)
+- проверка приложения на то, что все функции соотвествуют функциональным требованиям из ТЗ. в большинстве случаях используют метода черного ящика к функциональному тестированию относят (unit test, regression test, smoke test, integrational test, sanity testing(проводится после smoke и нужно чтоб убедиться что все основные функции системы работают), beta/usability testing, system testing, E2E testing). обычно используют две техники тестирования (тестирование на основе требований и тестированиена основе бизнес-сценариев)
+- критерии начала: (requirement specification document определен и утвержден, подготовлены тест кейсы, созданые тестовые данные, среда для тестирвоания готова и все необходимые иструмены доступны и готовы, все или часть приложения разработано и модульно протестировано и готово к тестированию)
+
+- критерии окончания: (выполнение всех функциональных тестов завершено, нет критических или открытых ошибок, сообщенные ошибки были подтверждены)
+
+- этапы:
+1. определить функциональности продукта котоыре необходимо протестировать и включает в себя тестирование основных функций, удобоство использования
+2. создание входных данных по спецификации требований
+3. из спецификации требований определяется результат для тестируемой функциональности
+4. использование тест кейсов
+5. фактический и ожидаемый результат сравнивают и по итогу решают работает ли так как задумано
 
 2. non functional testing
-- проверка всех не функциональных элементов приложения. другими словами проверка приложения на качество и прочность. (stress test, volume test, security test, configuration test, load test, interraption test, perfomance testing, recovery testing, failover testing, efficiency testing, disaster recovery testing, installation testing, documentation testing, usabiliry testing, UI testing, localization testing, internationalization, portabiliry testing,)
+- проверка всех не функциональных элементов приложения. другими словами проверка приложения на качество и прочность. проверяет поведение системы по всем аспектам, не охваченые функциональностью. (stress test, volume test, security test, configuration test, load test, interraption test, perfomance testing, recovery testing, failover testing, efficiency testing, disaster recovery testing, installation testing, documentation testing, usabiliry testing, UI testing, localization testing, internationalization, portabiliry testing,)
+
+- нефункциональные требования могут быть отражены как:
+1. пользовательские/технические истории
+2. критерии приемки
+3. в артефактах
+
+- документ подхода к тестированию (approach document)
+1. объем испытаний
+2. метрики
+3. инструменты тестирования
+4. основные даты и результаты
 
 3. domain testing
 - метод разработки тестовых сценариев когда множественные значения должны или могут быть протестированы одновременно. в него входит класс эквивалентности и граничащие значения.
