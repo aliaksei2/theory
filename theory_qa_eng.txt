@@ -10,8 +10,43 @@
 
 1.5 negative testing is a testing aimed at showing software does not work. also know as "test to fail"
 
-2. software lifecule is the period of time that begins when a software product is coneived and ends when the software is no longer available for use. the software lifecycle typical includes a concept phase, requrements phase, design phase, implemantation phase, test phase, instalation and checkout phase, operation and maintenance phase, and sometimes, retirement phase. 
+2. software lifecycle is the period of time that begins when a software product is conceived and ends when the software is no longer available for use. it includes some phase: ahalyse and requrement phase, design phase, implementation/development phase, test phase, acceptence phase and sometimes retirement phase.
 
 3. quality assurance is a part of quality management focused on providing confidence that quality requrements will be fulfilled
 
+4. software development model (SDM) is a framework that systematizes the varios project activities, their interaction and cosistency in the software development process. the choice of one or another model depends on the scale and complexity of the project, the subject area, avaliable resources, and many other variables. SDM includes many models, for example: waterfall model, v-model, iterative and incremental models, spiral mpdel, agile model wich includes scrum and kanbam.
+
+4.1 agile software development is a group of software development methodologies, where requrements and solutions evolve throgh collabaration between self-organizing and cross-functional teams
+
+4.2 in a waterfall model, each phase must be completed fully before the next phase can begin. this type of model is basically used for the project which is small and rhere are no uncetrain requrements. at the end of each phase, a review takes place to determine if the project is on the grip path and whether or not to continue or discard the project.  
+
+4.3 v-model is a logical development of the waterfall model. it is a framework to describe the software development lifecycle activities from requrements specfication to maintenance. the v-model illustrates how testing activities can be integrated into each phase of the software development lifecycle.
+
+4.4 iterative development model is a development lifecycle where a project is broken into a usually large iterations. an iteration is a full cycle resulting in a relese of a project, a subset of the final product under development, which grows from iteration to iteration to become the final product.
+
+4.5 incremental development model is lifecycle where a project is broken into a series of increments, each of which delivers a portion of the functionality in the overall project requrements.
+
+4.6 spiral model is a special case of the iterative incremental model. it is a software lifecycle model which supposes incremental develpment, using the waterfall model for each step, with the aim of managing risk. in the spiral model developers define and implement function in order of decreasing priority. this one includes 4 phase: 
+1. elaboration of objectives 
+2. risk analysis and prototyping
+3. product development
+4. planing the next cycle
+
+5. software testing lifecycle includes around 8 phase:
+1. general planing and requirements analysis is phase where we answer questions such as " what will be tested, how much work will be involved, what are the difficulties, do we have everything we need, etc"
+2. acceptance criteria establishment helps to formulate or refine the metrics and indicators of whether testing can or should be started, suspended and resumed, completed or terminated
+3. test strategy establishment is another reference to planing, but at a local level: those parts of the test strategy which are relevant for the current iteration are reviewd and refined
+4. test cases creation is a phase where test cases, chack lists, test suites, test scenarios and other artifacts are created and will be used in testing
+5. test cases execution and 6. defect reporting are closely related and in fact run in parallel: defects are reported as soon as they are found during the execution of the test cases.
+7. test result analysis and 8. test results reporting are also closely related and run almost in parallel.
+
+6. software testing principles:
+1. testing shows the presence of defects. testing cannot guarantee that in a given situation, under certain circumstances, a defect will not occur.
+2. exhaustive testing is impossible. in d theory is designed to test the app " with all possible combinations of all possible inputs under all possible execution conditions" but it is physically impossible
+3. early testing is more effective. early testing helps to eliminate or reduce costly changes.
+4. defect clustering. a lot of defects do not "just happen" in some "problem area" of the app. it is mean that a lot of defects are in one area. if you find defect in the app, you can find more defects near.
+5. the pesticide paradocx. the pesticide paradox manifests itself in repeating the same (or just similar) checks over and over again: over time, these checks will stop finding new defects.
+6. testing depends on the context. the main idea if this principe is that it is impossible to develop some "universal approach to testing" for all occasions, and even just copying testing approach from one project to another often does not end in anything good.
+7. absence of defects is a fallacy. a software product must not only be free from defects, but also satisfy the requirements of the customer and end users - otherwise it will become unusable.
+ 
   
