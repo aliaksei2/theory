@@ -1,8 +1,8 @@
-1. software testing is a process of analyzing software and accompanying documetetinon for indetify defects and improve the quality of the product. 
+1. software testing is a process of analyzing software and accompanyning documetetinon for indetify defects and improve the quality of the product. 
 
-1.1 testing is a process consisting of all lifecycle activites, both static and dynamic, planning, preparation and evaluation of software products
+1.1 testing is a process consisting of all lifecycle activites, both static and dynamic, concerned with planning, preparation and evaluation of software products and related work products to determine that they satisfy specified requirements, to demonstrate that they are fit for purpose and detect defects
 
-1.2 debugging is a process of finding, analyzing and removing the causes of failures in software
+1.2 debugging is a process of finding, analyzing and removing defects, causes of failures in software
 
 1.3 exhaustive testing is a test approuch in which the test suite comprises all combinations of input values and preconditions
 

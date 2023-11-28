@@ -1,0 +1,20 @@
+QA Interview Questions For Beginners
+1. What is Quality Assurance?
+2. How is Quality Assurance different from Software testing?
+3. Define the purpose of QA in Software Development.
+4. What is the lifecycle of a Quality Assurance Process?
+5. Differentiate between Test Plan and Test Strategy.
+6. Explain What is Build and Release. Differentiate Between Them.
+7. What Do You Understand About Bug Leakage and Bug Release?
+8. What Do You Mean by Monkey Testing?
+9. What Do You Mean by Gorilla Testing?
+10. Explain Testware.
+11. What is a traceability matrix?
+12. Distinguish Between Verification and Validation.
+13. Distinguish Between Retesting and Regression Testing?
+14. What is the Quality Audit?
+15. What Do You Know About the Defect Leakage Ratio?
+16. Describe the Different Forms of Software Quality Assurance Documentation.
+17. Explain the Rule of a “Test Driven Development?“
+18. What is a Cause-Effect Graph?
+19. What is Thread Testing?
