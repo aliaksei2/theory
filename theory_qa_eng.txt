@@ -14,11 +14,13 @@
 
 3. quality assurance is a part of quality management focused on providing confidence that quality requrements will be fulfilled
 
+3.1 quality control is a set of activities designed to evaluate the quality of a component or system
+
 4. software development model (SDM) is a framework that systematizes the varios project activities, their interaction and cosistency in the software development process. the choice of one or another model depends on the scale and complexity of the project, the subject area, avaliable resources, and many other variables. SDM includes many models, for example: waterfall model, v-model, iterative and incremental models, spiral mpdel, agile model wich includes scrum and kanbam.
 
 4.1 agile software development is a group of software development methodologies, where requrements and solutions evolve throgh collabaration between self-organizing and cross-functional teams
 
-4.2 in a waterfall model, each phase must be completed fully before the next phase can begin. this type of model is basically used for the project which is small and rhere are no uncetrain requrements. at the end of each phase, a review takes place to determine if the project is on the grip path and whether or not to continue or discard the project.  
+4.2 in a waterfall model, each phase must be completed fully before the next phase can begin. this type of model is basically used for the project which is small and there are no uncetrain requrements. at the end of each phase, a review takes place to determine if the project is on the grip path and whether or not to continue or discard the project.  
 
 4.3 v-model is a logical development of the waterfall model. it is a framework to describe the software development lifecycle activities from requrements specfication to maintenance. the v-model illustrates how testing activities can be integrated into each phase of the software development lifecycle.
 
