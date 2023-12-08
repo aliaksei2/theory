@@ -1,0 +1,68 @@
+1. software testing is a process of analyzing software and accompanying documentation for indetify defects and improve the quality of the product. 
+
+1.1 testing is a process consisting of all lifecycle activities, both static and dynamic, concerned with planning, preparation and evaluation of software products and related work products to determine that they satisfy specified requirements, to demonstrate that they are fit for purpose and detect defects
+
+1.2 debugging is a process of finding, analyzing and removing defects, causes of failures in software
+
+1.3 exhaustive testing is a test approach in which the test suite comprises all combinations of input values and preconditions
+
+1.4 positive testing is a testing aimed at showing software works. also know as "test to pass"
+
+1.5 negative testing is a testing aimed at showing software does not work. also know as "test to fail"
+
+2. software lifecycle is the period of time that begins when a software product is conceived and ends when the software is no longer available for use. it includes some phase: analyze and requirement phase, design phase, implementation/development phase, test phase, acceptance phase and sometimes retirement phase.
+
+3. quality assurance is a part of quality management focused on providing confidence that quality requirements will be fulfilled
+
+3.1 quality control is a set of activities designed to evaluate the quality of a component or system
+
+4. software development model (SDM) is a framework that systematizes the various project activities, their interaction and consistency in the software development process. the choice of one or another model depends on the scale and complexity of the project, the subject area, available resources, and many other variables. SDM includes many models, for example: waterfall model, v-model, iterative and incremental models, spiral model, agile model which includes scrum and kanban.
+
+4.1 agile software development is a group of software development methodologies, where requirements and solutions evolve through collaboration between self-organizing and cross-functional teams
+
+4.2 in a waterfall model, each phase must be completed fully before the next phase can begin. this type of model is basically used for the project which is small and there are no uncertain requirements. at the end of each phase, a review takes place to determine if the project is on the grip path and whether or not to continue or discard the project.  
+
+4.3 v-model is a logical development of the waterfall model. it is a framework to describe the software development lifecycle activities from requirements specification to maintenance. the v-model illustrates how testing activities can be integrated into each phase of the software development lifecycle.
+
+4.4 iterative development model is a development lifecycle where a project is broken into a usually large iterations. an iteration is a full cycle resulting in a realese of a project, a subset of the final product under development, which grows from iteration to iteration to become the final product.
+
+4.5 incremental development model is lifecycle where a project is broken into a series of increments, each of which delivers a portion of the functionality in the overall project requirements.
+
+4.6 spiral model is a special case of the iterative incremental model. it is a software lifecycle model which supposes incremental develepment, using the waterfall model for each step, with the aim of managing risk. in the spiral model developers define and implement function in order of decreasing priority. this one includes 4 phase: 
+1. elaboration of objectives 
+2. risk analysis and prototyping
+3. product development
+4. planing the next cycle
+
+5. software testing lifecycle includes around 8 phase:
+1. general planing and requirements analysis is phase where we answer questions such as " what will be tested, how much work will be involved, what are the difficulties, do we have everything we need, etc"
+2. acceptance criteria establishment helps to formulate or refine the metrics and indicators of whether testing can or should be started, suspended and resumed, completed or terminated
+3. test strategy establishment is another reference to planing, but at a local level: those parts of the test strategy which are relevant for the current iteration are reviews and refined
+4. test cases creation is a phase where test cases, check lists, test suites, test scenarios and other artifacts are created and will be used in testing
+5. test cases execution and 6. defect reporting are closely related and in fact run in parallel: defects are reported as soon as they are found during the execution of the test cases.
+7. test result analysis and 8. test results reporting are also closely related and run almost in parallel.
+
+6. software testing principles:
+1. testing shows the presence of defects. testing cannot guarantee that in a given situation, under certain circumstances, a defect will not occur.
+2. exhaustive testing is impossible. in d theory is designed to test the app " with all possible combinations of all possible inputs under all possible execution conditions" but it is physically impossible
+3. early testing is more effective. early testing helps to eliminate or reduce costly changes.
+4. defect clustering. a lot of defects do not "just happen" in some "problem area" of the app. it is mean that a lot of defects are in one area. if you find defect in the app, you can find more defects near.
+5. the pesticide paradox. the pesticide paradox manifests itself in repeating the same (or just similar) checks over and over again: over time, these checks will stop finding new defects.
+6. testing depends on the context. the main idea if this principe is that it is impossible to develop some "universal approach to testing" for all occasions, and even just copying testing approach from one project to another often does not end in anything good.
+7. absence of defects is a fallacy. a software product must not only be free from defects, but also satisfy the requirements of the customer and end users - otherwise it will become unusable.
+ 
+7. functional testing
+it is a type of testing that seeks to establish whether each app feature works as per the software requirements. functional testing comprises smoke testing, sanity testing, unit testing, integration testing, system testing, usability testing, E2E testing, regression testing.
+
+8. non functional testing is a type of software testing that verifies non functional aspects of the product, such a performance, stability, security, scalability, reliability, requirements.
+
+9. type of testing based on access to the code
+1. white box is a type of testing implies that a tester has access to the internal structure and the code of an app and has enough knowledge to understand what he sees
+2. black box is a type of testing implies that tester either does not have access to the structure of an app and to the app code, or does not have enough knowledge to understand both.
+in black box testing documentation and common sense are the basic information for creating test cases.
+3. gray box is a combination of white and black box technique, meaning that a tester has only partial access to the code and the architecture. 
+
+10. type of testing by the importance of the functions being tested
+1. smoke testing is a type of testing aimed at checking the main functionality, the failure of which makes the very idea of using an app meaningless
+2. critical path testing is a type of testing focuses on functionality used by typical users in their daily activities. most users mostly use some subset of app features.
+3. extended testing is a type of testing "explores" the functional declared in the requirements. it takes into account which functionality is more important and which is less important. 
