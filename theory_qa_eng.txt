@@ -51,4 +51,18 @@
 6. testing depends on the context. the main idea if this principe is that it is impossible to develop some "universal approach to testing" for all occasions, and even just copying testing approach from one project to another often does not end in anything good.
 7. absence of defects is a fallacy. a software product must not only be free from defects, but also satisfy the requirements of the customer and end users - otherwise it will become unusable.
  
-  
+7. functional testing
+it is a type of testing that seeks to establish whether each app feature works as perthe software requirements. functional testing comprises smoke testing, sanity testing, unit testing, integrational testing, system tesing, usability testing, E2E testing, regression testing.
+
+8. non functional testing is a type of software testing that verifies non functional aspects of the product, such a perfomance, stability, security, scalability, reliability, requirements.
+
+9. type of testing based on access to the code
+1. white box is a type of testing implies that a tester has access to the internal structure and the code of an app and has enough knowledge to understand what he sees
+2. black box is a type of testing implies that tester either does not have access to the structure of an app and to the app code, or does not have enough knowledge to understand both.
+in blac box testing documentation and common sense are the basic information for creating test cases.
+3. gray box is a combination of white and black box technique, meaning that a tester has only partial access to the code and the architecture. 
+
+10. type of testing by the importance of the functions being tested
+1. smoke testing is a type of testing aimed at checking the main functionality, the failure of which makes the very idea of using an app meaningless
+2. critical path tesing is a type of testing focuses on functionality used by typical users in their daily activities. most users mostly use some subset of app features.
+3. extended testing is a type of testong "explores" the functional declared in the requirements. it takes into account which functionality is more important and which is less important. 
