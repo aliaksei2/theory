@@ -14,7 +14,7 @@
 
 3. quality assurance is a part of quality management focused on providing confidence that quality requirements will be fulfilled
 
-3.1 quality control is a set of activities designed to evaluate the quality of a component or system
+3.1 quality control is a part of quality management focused on fulfilling qualiti requirements
 
 4. software development model (SDM) is a framework that systematizes the various project activities, their interaction and consistency in the software development process. the choice of one or another model depends on the scale and complexity of the project, the subject area, available resources, and many other variables. SDM includes many models, for example: waterfall model, v-model, iterative and incremental models, spiral model, agile model which includes scrum and kanban.
 
@@ -54,6 +54,12 @@
 7. functional testing
 it is a type of testing that seeks to establish whether each app feature works as per the software requirements. functional testing comprises smoke testing, sanity testing, unit testing, integration testing, system testing, usability testing, E2E testing, regression testing.
 
+7.1 regression testing is a type of software testing conducted after a code update to ensure that the update introduced no new bugs.
+
+7.2 usability testing also know as user experience testing, is a testing method for measuring how easy and user-friendly a software application is. usability testing mainly focuses on user's ease of using application, flexibility of application to handle controls and ability of application to meet its objectives.
+
+7.3 E2E testing is a software testing methood that verifies the working order of a software product in a start to finish process.
+
 8. non functional testing is a type of software testing that verifies non functional aspects of the product, such a performance, stability, security, scalability, reliability, requirements.
 
 9. type of testing based on access to the code
@@ -62,7 +68,21 @@ it is a type of testing that seeks to establish whether each app feature works a
 in black box testing documentation and common sense are the basic information for creating test cases.
 3. gray box is a combination of white and black box technique, meaning that a tester has only partial access to the code and the architecture. 
 
-10. type of testing by the importance of the functions being tested
+10. testing levels by priority/type of testing by the importance of the functions being tested
 1. smoke testing is a type of testing aimed at checking the main functionality, the failure of which makes the very idea of using an app meaningless
 2. critical path testing is a type of testing focuses on functionality used by typical users in their daily activities. most users mostly use some subset of app features.
-3. extended testing is a type of testing "explores" the functional declared in the requirements. it takes into account which functionality is more important and which is less important. 
+3. extended testing is a type of testing "explores" the functional declared in the requirements. it takes into account which functionality is more important and which is less important.
+
+11. testing levels/testing pyramid by detalization
+1. unit testing confirmed that the right results are returned for each function.
+2. integration testing is a type of software testing where components of the software are gradually integrated and then tested as a unified group.
+3. system testing is a testing of a complete and fully integrated software product.
+4.acceptance testing is the last phase of software testing performed. it is a formal testing according to user needs, requirements and business processes conducted to determine whether a system satisfies the acceptance criteria or not and to enable the users, customers or other authorized enities to determine whether to accept the system or not. 
+
+12. severity and priority
+1. severity means the seriousness of the defect in the product functional
+2. priority means how soon the bug should be fixed
+
+
+
+
