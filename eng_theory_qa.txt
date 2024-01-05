@@ -83,6 +83,136 @@ in black box testing documentation and common sense are the basic information fo
 1. severity means the seriousness of the defect in the product functional
 2. priority means how soon the bug should be fixed
 
+13. good requiremetns properties
+1. completness
+2. atomicity
+3. consistency
+4. unambiguousness (clearness)
+5. feasibility
+6. obiligatoriness and up-to-date
+7. traceability
+8. modifiability
+9. ranked for importance, stability, priority
+13. good requiremetns properties
+1. completness
+2. atomicity
+3. consistency
+4. unambiguousness (clearness)
+5. feasibility
+6. obiligatoriness and up-to-date
+7. traceability
+8. modifiability
+9. ranked for importance, stability, priority
+13. good requiremetns properties
+1. completness
+2. atomicity
+3. consistency
+4. unambiguousness (clearness)
+5. feasibility
+6. obiligatoriness and up-to-date
+7. traceability
+8. modifiability
+9. ranked for importance, stability, priority
+13. good requiremetns properties
+1. completness
+2. atomicity
+3. consistency
+4. unambiguousness (clearness)
+5. feasibility
+6. obiligatoriness and up-to-date
+7. traceability
+8. modifiability
+9. ranked for importance, stability, priority
+13. good requiremetns properties
+1. completness
+2. atomicity
+3. consistency
+4. unambiguousness (clearness)
+5. feasibility
+6. obiligatoriness and up-to-date
+7. traceability
+8. modifiability
+9. ranked for importance, stability, priority
+13. good requiremetns properties
+1. completness
+2. atomicity
+3. consistency
+4. unambiguousness (clearness)
+5. feasibility
+6. obiligatoriness and up-to-date
+7. traceability
+8. modifiability
+9. ranked for importance, stability, priority
+13. good requiremetns properties
+1. completness
+2. atomicity
+3. consistency
+4. unambiguousness (clearness)
+5. feasibility
+6. obiligatoriness and up-to-date
+7. traceability
+8. modifiability
+9. ranked for importance, stability, priority
+13. good requiremetns properties
+1. completness
+2. atomicity
+3. consistency
+4. unambiguousness (clearness)
+5. feasibility
+6. obiligatoriness and up-to-date
+7. traceability
+8. modifiability
+9. ranked for importance, stability, priority
+13. good requiremetns properties
+1. completness
+2. atomicity
+3. consistency
+4. unambiguousness (clearness)
+5. feasibility
+6. obiligatoriness and up-to-date
+7. traceability
+8. modifiability
+9. ranked for importance, stability, priority
+13. good requiremetns properties
+1. completness
+2. atomicity
+3. consistency
+4. unambiguousness (clearness)
+5. feasibility
+6. obiligatoriness and up-to-date
+7. traceability
+8. modifiability
+9. ranked for importance, stability, priority
+13. good requiremetns properties
+1. completness
+2. atomicity
+3. consistency
+4. unambiguousness (clearness)
+5. feasibility
+6. obiligatoriness and up-to-date
+7. traceability
+8. modifiability
+9. ranked for importance, stability, priority
+13. good requiremetns properties
+1. completness
+2. atomicity
+3. consistency
+4. unambiguousness (clearness)
+5. feasibility
+6. obiligatoriness and up-to-date
+7. traceability
+8. modifiability
+9. ranked for importance, stability, priority
+13. good requiremetns properties
+1. completness
+2. atomicity
+3. consistency
+4. unambiguousness (clearness)
+5. feasibility
+6. obiligatoriness and up-to-date
+7. traceability
+8. modifiability
+9. ranked for importance, stability, priority
 
 
 
