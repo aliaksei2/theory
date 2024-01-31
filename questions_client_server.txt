@@ -79,7 +79,7 @@ client - CC - DNS - web server - web service - database
 - 3** переадресация(redirection)
   300 множественный выбор (multiply choice)
   301 перемещен на постоянной основе (moved permanently) (URI был изменен)
-  302 перемещен временно (found)
+  302 перемещен временно (found(moved temporarily))
   303 see other
 - 4** ошибка на стороне клиента(client error responses)
   400 плохой запрос (bad request)
