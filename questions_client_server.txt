@@ -226,6 +226,69 @@ client - CC - DNS - web server - web service - database
 
 43. web services description language и Web Application Description Language  что это
 - WSDL это язык описания веб сервисов. это стандартный формат для описания веб службы. основан на XML протоколе для обмена информацией. он содержит информацию о конечных точках или интерфесах для подключения к внешнему миру. как правило для SOAP.
+- простыми словами, он используется для простого описания предоставляемых услуг системой SOAP
 - данный файл описывает структуру веб сервиса, как он будет взаимодействовать с запросами. он обязателен для SOAP, без него не получится использовать данный протокол
+WSDL можно разделить на логические части: определение типов данных (type), елементы данных (message), абстрактные операции (portType), связывание сервисов (binding), конкретная точка вызова сервиса (service)
+<message name="getTermRequest">
+   <part name="term" type="xs:string"/>
+</message>
+
+<message name="getTermResponse">
+   <part name="value" type="xs:string"/>
+</message>
+
+<portType name="glossaryTerms">
+  <operation name="getTerm">
+      <input message="getTermRequest"/>
+      <output message="getTermResponse"/>
+  </operation>
+</portType>
+
 - WADL это язык описания веб приложения. это описание XML в машинном виде веб приложений на основе http. моделирует ресурсы, предоставленные службы и взаимосвязи между ними. оно служит для упрощения повторного использования веб служб, основанных на существуещей архитектуре http. помогает повторно использовать приложения за пределами простого использования в веб браузере. как правило для веб сервисов REST.(машино читаемое XML описание для веб приложений http).
-   
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://wadl.dev.java.net/2009/02 wadl.xsd" 
+  xmlns:tns="urn:yahoo:yn" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:yn="urn:yahoo:yn" 
+  xmlns:ya="urn:yahoo:api" 
+  xmlns="http://wadl.dev.java.net/2009/02"> 
+   <grammars> 
+     <include 
+       href="NewsSearchResponse.xsd"/> 
+     <include 
+       href="Error.xsd"/> 
+   </grammars> 
+ 
+   <resources base="http://api.search.yahoo.com/NewsSearchService/V1/"> 
+     <resource path="newsSearch"> 
+       <method name="GET" id="search"> 
+         <request> 
+           <param name="appid" type="xsd:string" 
+             style="query" required="true"/> 
+           <param name="query" type="xsd:string" 
+             style="query" required="true"/> 
+           <param name="type" style="query" default="all"> 
+             <option value="all"/> 
+             <option value="any"/> 
+             <option value="phrase"/> 
+           </param> 
+           <param name="results" style="query" type="xsd:int" default="10"/> 
+           <param name="start" style="query" type="xsd:int" default="1"/> 
+           <param name="sort" style="query" default="rank"> 
+             <option value="rank"/> 
+             <option value="date"/> 
+           </param> 
+           <param name="language" style="query" type="xsd:string"/> 
+         </request> 
+         <response status="200"> 
+           <representation mediaType="application/xml" 
+             element="yn:ResultSet"/> 
+         </response> 
+         <response status="400"> 
+           <representation mediaType="application/xml" 
+             element="ya:Error"/> 
+         </response> 
+       </method> 
+     </resource> 
+   </resources> 
+</application>   
